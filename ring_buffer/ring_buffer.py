@@ -13,20 +13,3 @@ class RingBuffer:
     def get(self):
 
         return list(filter(lambda x: x != None, self.storage))
-
-
-buffer = RingBuffer(5)
-
-print(len(buffer.storage), 5)
-print(buffer.storage, 5)
-buffer.append('a')
-buffer.append('b')
-buffer.append('c')
-buffer.append('d')
-print(buffer.storage, 5)
-print(buffer.get(), ['a', 'b', 'c', 'd'])
-
-buffer.append('e')
-print((buffer.storage), 5)
-buffer.append('f')
-print((buffer.storage), 5)
